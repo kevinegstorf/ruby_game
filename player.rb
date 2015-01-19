@@ -3,7 +3,7 @@ class Player
         @window = window
         @icon = Gosu::Image.new(@window, "player.png", true)
                 @x = 0
-                @y = 0
+                @y = window.height - 80
         end
    
         def move_left
