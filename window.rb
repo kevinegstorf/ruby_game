@@ -1,4 +1,4 @@
-class Window < Gosu: :Window
+class Window < Gosu::Window
 
 	def initialize
 		super(300,300,false)

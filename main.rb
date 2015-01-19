@@ -1,3 +1,5 @@
+
+require 'rubygems'
 require 'gosu'
 require_relative 'window'
 require_relative 'player'
