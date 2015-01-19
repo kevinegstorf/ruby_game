@@ -3,7 +3,7 @@ class Window < Gosu::Window
     def initialize
         super(300,300,false)
         @player = Player.new(self)
-        @bullet = Bullet.new(self)
+        @bullet = [Bullet.new(self), Bullet.new(self)]
     end
     
     def update
@@ -16,13 +16,13 @@ class Window < Gosu::Window
             if button_down? Gosu::Button::KbRight
                 @player.move_right
             end
-            @bullet.update
+            @bullet.each {|bullet| bullet.update}
         end
     end
     
     def draw
         @player.draw
-        @bullet.draw
+         @bullet.each {|bullet| bullet.draw}
     end
     
 end

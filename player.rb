@@ -30,10 +30,10 @@ class Player
         end
     end
     
-    def hit_by?(bullet)
-        if Gosu::distance(bullet.x, bullet.y, @x, @y) < 20
-            @exploded = true
-        end
+    def hit_by?(bullets)
+       @exploded = bullets.any? {|bullet| Gosu::distance(bullet.x, bullet.y, @x, @y) < 20}
+          
+        
     end
     
 end
